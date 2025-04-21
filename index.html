@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico"/>
+    <title>Document</title>
+    <!-- Google fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Nunito:200,300,400,600,700,800,900" rel="stylesheet" />
+    <!-- Core theme CSS (includes Bootstrap)-->
+    <link href="css/styles.css" rel="stylesheet"/>
+    <!-- Bootstrap core JS-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Core theme JS-->
+    <script src="js/scripts.js"></script>
+    <style>
+        /* Modal Overlay */
+        .modal-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.6); /* Transparent dark background */
+            z-index: 1000;
+            justify-content: center;
+            align-items: center;
+            transition: opacity 0.3s ease;
+        }
+
+        /* Modal Content */
+        .modal-content {
+            background: rgba(255, 255, 255, 0.80); /* White with transparency */
+            padding: 20px;
+            border-radius: 8px;
+            max-width: 500px;
+            width: 100%;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            text-align: center;
+        }
+
+        /* Close Button */
+        .close-btn {
+            background-color: red;         /* Red background color */
+            color: white;                  /* White text color */
+            font-size: 20px;               /* Font size */
+            padding: 10px;                 /* Padding around the text */
+            border: none;                  /* Remove default border */
+            border-radius: 50%;            /* Round button */
+            cursor: pointer;              /* Change cursor to pointer on hover */
+            position: absolute;            /* Position it absolutely inside its parent */
+            top: 10px;                     /* Position it 10px from the top */
+            right: 10px;                   /* Position it 10px from the right */
+            z-index: 10;                   /* Ensure the button is above other content */
+            transition: background-color 0.3s ease; /* Smooth transition for background color */
+        }
+
+        .close-btn:hover {
+            background-color: darkred;     /* Darker red color on hover */
+        }
+
+    </style>
+</head>
+<body style="background-image: url('assets/img/background.webp'); background-size: cover; background-position: center; background-repeat: no-repeat;">
+    <div class="d-flex justify-content-center text-center">
+        <header class="header w-100" style="background-image: url('assets/img/red.avif'); background-size:contain;">
+            <div class="container px-4 px-lg-5 d-flex h-100 align-items-center justify-content-center">
+                <div class="d-flex justify-content-center text-center">
+                    <h1 class="h1 mb-4" style="font-family: cursive; user-select: none;">This year's official STEM Advent callendar</h1>
+                    <div class="position-absolute top-0 end-0 p-3">
+                        <button class="btn btn-danger admin-button">Unlock All</button>
+                    </div>            
+                </div>
+            </div>
+        </header>
+    </div>
+    <div class="container px-4 px-lg-5">
+        <div class="row text-center">
+            <h5 class="text-light h2 user-select-none" style="font-family: cursive;">December 2024</h5>
+        </div>
+        <div class="row text-center">
+            <!-- Days 1 to 8 -->
+            <div class="col mt-4">
+                <div class="card christmas-spectrum">
+                    <h1 class="my-4">1</h1>
+                </div>
+            </div>
+            <div class="col mt-4">
+                <div class="card christmas-spectrum">
+                    <h1 class="my-4">2</h1>
+                </div>
+            </div>
+            <div class="col mt-4">
+                <div class="card christmas-spectrum">
+                    <h1 class="my-4">3</h1>
+                </div>
+            </div>
+            <div class="col mt-4">
+                <div class="card christmas-spectrum">
+                    <h1 class="my-4">4</h1>
+                </div>
+            </div>
+            <div class="col mt-4">
+                <div class="card christmas-spectrum">
+                    <h1 class="my-4">5</h1>
+                </div>
+            </div>
+            <div class="col mt-4">
+                <div class="card christmas-spectrum">
+                    <h1 class="my-4">6</h1>
+                </div>
+            </div>
+            <div class="col mt-4">
+                <div class="card christmas-spectrum">
+                    <h1 class="my-4">7</h1>
+                </div>
+            </div>
+        </div>
+
+        <div class="row text-center">
+            <!-- Days 8 to 14 -->
+            <div class="col mt-4">
+                <div class="card christmas-spectrum">
+                    <h1 class="my-4">8</h1>
+                </div>
+            </div>
+            <div class="col mt-4">
+                <div class="card christmas-spectrum">
+                    <h1 class="my-4">9</h1>
+                </div>
+            </div>
+            <div class="col mt-4">
+                <div class="card christmas-spectrum">
+                    <h1 class="my-4">10</h1>
+                </div>
+            </div>
+            <div class="col mt-4">
+                <div class="card christmas-spectrum">
+                    <h1 class="my-4">11</h1>
+                </div>
+            </div>
+            <div class="col mt-4">
+                <div class="card christmas-spectrum">
+                    <h1 class="my-4">12</h1>
+                </div>
+            </div>
+            <div class="col mt-4">
+                <div class="card christmas-spectrum">
+                    <h1 class="my-4">13</h1>
+                </div>
+            </div>
+            <div class="col mt-4">
+                <div class="card christmas-spectrum">
+                    <h1 class="my-4">14</h1>
+                </div>
+            </div>
+        </div>
+
+        <div class="row text-center">
+            <!-- Days 15 to 21 -->
+            <div class="col mt-4">
+                <div class="card christmas-spectrum">
+                    <h1 class="my-4">15</h1>
+                </div>
+            </div>
+            <div class="col mt-4">
+                <div class="card christmas-spectrum">
+                    <h1 class="my-4">16</h1>
+                </div>
+            </div>
+            <div class="col mt-4">
+                <div class="card christmas-spectrum">
+                    <h1 class="my-4">17</h1>
+                </div>
+            </div>
+            <div class="col mt-4">
+                <div class="card christmas-spectrum">
+                    <h1 class="my-4">18</h1>
+                </div>
+            </div>
+            <div class="col mt-4">
+                <div class="card christmas-spectrum">
+                    <h1 class="my-4">19</h1>
+                </div>
+            </div>
+            <div class="col mt-4">
+                <div class="card christmas-spectrum">
+                    <h1 class="my-4">20</h1>
+                </div>
+            </div>
+            <div class="col mt-4">
+                <div class="card christmas-spectrum">
+                    <h1 class="my-4">21</h1>
+                </div>
+            </div>
+        </div>
+
+        <div class="row text-center">
+        <div class="col mt-4">
+            <div class="card christmas-spectrum">
+                <h1 class="my-4">22</h1>
+            </div>
+        </div>
+        <div class="col mt-4">
+            <div class="card christmas-spectrum">
+                <h1 class="my-4">23</h1>
+            </div>
+        </div>
+        <div class="col mt-4">
+            <div class="card christmas-spectrum">
+                <h1 class="my-4">24</h1>
+            </div>
+        </div>
+        <div class="col mt-4">
+            <div class="card christmas-spectrum special">
+                <h1 class="my-4">25</h1>
+            </div>
+        </div>
+        <div class="col mt-4"></div>
+        <div class="col mt-4"></div>
+        <div class="col mt-4"></div>
+        </div>
+    </div>
+    
+    <!-- Modal Overlay -->
+    <div id="modal-overlay" class="modal-overlay">
+        <div class="modal-content">
+            <div id="modal-content-body">
+                <!-- Dynamic content will be injected here -->
+            </div>
+            <div class="close-btn"></div>
+        </div>
+    </div>
+</body>
+</html>
